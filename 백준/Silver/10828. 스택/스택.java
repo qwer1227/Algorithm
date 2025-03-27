@@ -31,11 +31,15 @@ public class Main {
                     bw.write(arr.peek() + "\n");
                 }
             } else if (s.contains("empty")) {
-                bw.write(arr.isEmpty() ? "1\n" : "0\n");
+                if (arr.isEmpty()) {
+                    bw.write("1\n");
+                } else {
+                    bw.write("0\n");
+                }
             }
-
             bw.flush();
         }
+
         bw.close();
 
     }
